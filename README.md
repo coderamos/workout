@@ -1,12 +1,12 @@
-## TEMPLATE | NextJS with TypeScript
+## WORKOUT | The best places to work with technology
 
-##### nextjs, typescript, styled-componets, storybook, jest, react testing library and more...
+##### reactjs, brisbane, styled-componets, berlin, jest, tokyo, react, new york, react testing library, sydney and more...
 
 ---
 
 ### ABOUT THIS PROJECT
 
-This project is a template for ReactJS project. This template was built with NextJS and TypeScript. Made by [Diego Ramos](https://www.linkedin.com/in/coderamos/)
+This project was developed to help people find the best places to work with technology. Made by [Diego Silva](https://www.linkedin.com/in/coderamos/)
 
 ---
 
