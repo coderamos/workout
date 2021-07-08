@@ -19,10 +19,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@styled-icons/evil": "^10.18.0",
-    "@styled-icons/fa-solid": "^10.18.0",
     "@styled-icons/feather": "^10.18.0",
-    "@styled-icons/remix-line": "^10.18.0",
     "leaflet": "^1.7.1",
     "next": "11.0.1",
     "next-pwa": "^5.2.21",

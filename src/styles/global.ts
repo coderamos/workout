@@ -51,6 +51,7 @@ const GlobalStyles: GlobalStyleComponent<
     body,
     #___next {
       color: ${theme.colors.white};
+      height: 100%;
     }
     html {
       font-size: 62.5%;

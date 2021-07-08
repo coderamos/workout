@@ -11,13 +11,10 @@ export const Wrapper = styled.section`
 `;
 
 export const Content = styled.section`
-  ${({ theme }) => css`
-    flex: 1 0 auto;
-    margin-top: ${theme.spacings.xlarge};
-    align-items: center;
-    text-align: center;
-    display: flex;
-  `};
+  flex: 1 0 auto;
+  align-items: center;
+  text-align: center;
+  display: flex;
 `;
 
 export const SectionFooter = styled.section`
