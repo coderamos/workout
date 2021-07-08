@@ -1,6 +1,6 @@
 export default {
   grid: {
-    container: '130rem',
+    container: '100rem',
     gutter: '3.2rem'
   },
   border: {
@@ -23,8 +23,10 @@ export default {
     }
   },
   colors: {
+    black: '#000000',
     white: '#FFFFFF',
-    black: '#000000'
+    cyan: '#00E7F9',
+    supernova: '#FFCB00'
   },
   spacings: {
     xsmall: '0.4rem',

@@ -47,6 +47,11 @@ const GlobalStyles: GlobalStyleComponent<
   }
 
   ${({ theme, removeBackgroundColor }) => css`
+    html,
+    body,
+    #___next {
+      color: ${theme.colors.white};
+    }
     html {
       font-size: 62.5%;
     }
@@ -55,7 +60,18 @@ const GlobalStyles: GlobalStyleComponent<
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
 
-      ${!removeBackgroundColor && css``}
+      ${!removeBackgroundColor &&
+      css`
+        background-color: ${theme.colors.black};
+      `}
+    }
+
+    p {
+      line-height: 3rem;
+    }
+
+    a {
+      color: ${theme.colors.cyan};
     }
   `}
 `;

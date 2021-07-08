@@ -1,16 +1,12 @@
+import dynamic from 'next/dynamic';
+
 import BaseTemplate from 'templates/Base';
 
-import { Container } from 'components/Container';
-
-import * as s from './styles';
+const Map = dynamic(() => import('components/Map'), { ssr: false });
 
 const Home = () => (
   <BaseTemplate>
-    <Container>
-      <s.Wrapper>
-        <h1>workout/</h1>
-      </s.Wrapper>
-    </Container>
+    <Map />
   </BaseTemplate>
 );
 
