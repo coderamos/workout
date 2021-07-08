@@ -1,0 +1,21 @@
+{
+  "name": "Workout",
+  "short_name": "workout",
+  "icons": [
+    {
+      "src": "/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#000000",
+  "description": "The best places to work with technology",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#00E7F9"
+}
