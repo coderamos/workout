@@ -1,11 +1,7 @@
 import AboutTemplate from 'templates/About';
 
 const About = () => {
-  return (
-    <AboutTemplate>
-      <h1>about</h1>
-    </AboutTemplate>
-  );
+  return <AboutTemplate />;
 };
 
 export default About;

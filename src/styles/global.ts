@@ -66,14 +66,6 @@ const GlobalStyles: GlobalStyleComponent<
         background-color: ${theme.colors.black};
       `}
     }
-
-    p {
-      line-height: 3rem;
-    }
-
-    a {
-      color: ${theme.colors.cyan};
-    }
   `}
 `;
 

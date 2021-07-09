@@ -20,11 +20,11 @@ export const Content = styled.section`
 export const SectionFooter = styled.section`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.large};
-    padding-bottom: ${theme.spacings.xsmall};
-    padding-top: ${theme.spacings.xlarge};
+    padding-bottom: ${theme.spacings.extraSmall};
+    padding-top: ${theme.spacings.extraLarge};
     clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
     ${media.greaterThan('medium')`
-      padding-top: calc(${theme.spacings.xlarge} * 2);
+      padding-top: calc(${theme.spacings.extraLarge} * 2);
       clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
     `}
   `}

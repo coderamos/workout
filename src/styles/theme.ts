@@ -15,11 +15,16 @@ export default {
       bold: 600
     },
     sizes: {
-      xsmall: '0.8rem',
+      extraSmall: '0.8rem',
       small: '1.2rem',
       medium: '1.6rem',
       large: '2.0rem',
-      xlarge: '2.4rem'
+      extraLarge: '2.4rem',
+      displayExtraSmall: '4.0rem',
+      displaySmall: '4.8rem',
+      display: '5.6rem',
+      displayLarge: '7.2rem',
+      displayExtraLarge: '8.0rem'
     }
   },
   colors: {
@@ -29,11 +34,11 @@ export default {
     supernova: '#FFCB00'
   },
   spacings: {
-    xsmall: '0.4rem',
+    extraSmall: '0.4rem',
     small: '0.8rem',
     medium: '1.6rem',
     large: '2.4rem',
-    xlarge: '4.8rem'
+    extraLarge: '4.8rem'
   },
   layers: {
     base: 10,
