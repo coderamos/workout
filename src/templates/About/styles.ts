@@ -33,7 +33,7 @@ export const HeaderLogoWrapper = styled.div`
 
 export const HeaderText = styled.h1`
   ${({ theme }) => css`
-    text-transform: lowercase;
+    text-transform: uppercase;
     font-size: ${theme.font.sizes.extraLarge};
     font-weight: ${theme.font.weights.normal};
   `}

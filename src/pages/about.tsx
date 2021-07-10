@@ -5,6 +5,7 @@ import client from 'graphql/client';
 import { GET_CREATORS } from 'graphql/queries';
 
 import AboutTemplate, { AboutTemplateProps } from 'templates/About';
+import { GetCreatorsQuery } from 'graphql/generated/graphql';
 
 export default function AboutPage({ creators }: AboutTemplateProps) {
   const router = useRouter();
@@ -14,7 +15,7 @@ export default function AboutPage({ creators }: AboutTemplateProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { creators } = await client.request(GET_CREATORS);
+  const { creators } = await client.request<GetCreatorsQuery>(GET_CREATORS);
   if (!creators) return { notFound: true };
 
   return {
