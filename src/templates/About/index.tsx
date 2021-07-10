@@ -1,33 +1,54 @@
 import { Map as MapIcon } from '@styled-icons/feather';
-import LinkWrapper from 'components/LinkWrapper';
 
+import LinkWrapper from 'components/LinkWrapper';
 import { Container } from 'components/Container';
 
+import WorkoutLogoText from 'assets/icons/WorkoutLogoText';
+
 import * as s from './styles';
+
+export type AboutTemplateProps = {
+  heading: string;
+  slug: string;
+  companyAvatar?: string;
+  companyName: string;
+  companyDescription: string;
+  developerAvatar?: string;
+  developerName: string;
+  developerDescription: string;
+};
 
 const AboutTemplate = () => (
   <s.Wrapper>
     <LinkWrapper href="/">
       <MapIcon size={32} aria-label="about" />
     </LinkWrapper>
+    <s.HeaderWrapper>
+      <s.HeaderLogoWrapper>
+        <WorkoutLogoText />
+      </s.HeaderLogoWrapper>
+      <s.HeaderText>about</s.HeaderText>
+    </s.HeaderWrapper>
     <Container>
       <s.Content>
-        <s.HeadingWrapper>heading</s.HeadingWrapper>
         <s.BodyWrapper>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            nisi facilis esse tenetur fuga. Possimus, quo vitae quisquam
-            obcaecati quis cum neque eos, quae ducimus illo atque eligendi in,
-            deleniti quam perferendis quibusdam sapiente veniam nobis magni nemo
-            laudantium quas ab culpa. Neque, deleniti tempora accusamus
-            perspiciatis esse adipisci fuga a corrupti delectus itaque dolores
-            quae ipsam sed repellat. Vero quam harum repellat quisquam aut
-            aliquid unde, veniam placeat, pariatur amet quia optio nesciunt
-            natus consequatur? Ullam, nesciunt facere ad numquam recusandae
-            repellat amet alias id, reiciendis illo consequatur soluta, quae
-            modi aperiam accusamus quibusdam earum repellendus cum iste
-            blanditiis?
-          </p>
+          <s.ProfileCardWrapper>
+            <s.PictureWrapper src="https://avatars.githubusercontent.com/u/38539443?v=4" />
+            <s.ProfileName>workout</s.ProfileName>
+            <s.ProfileDescription>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+              dolorum?
+            </s.ProfileDescription>
+          </s.ProfileCardWrapper>
+          <s.ProfileCardWrapper>
+            <s.PictureWrapper src="https://avatars.githubusercontent.com/u/38539443?v=4" />
+            <s.ProfileName>diego silva</s.ProfileName>
+            <s.ProfileDescription>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas
+              architecto odit dignissimos corrupti, consequuntur ut nemo nostrum
+              dicta accusamus est.
+            </s.ProfileDescription>
+          </s.ProfileCardWrapper>
         </s.BodyWrapper>
       </s.Content>
     </Container>

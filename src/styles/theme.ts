@@ -4,15 +4,20 @@ export default {
     gutter: '3.2rem'
   },
   border: {
-    radius: '0.4rem'
+    radius: {
+      medium: '0.4rem',
+      large: '0.8rem',
+      rounded: '50%'
+    }
   },
   font: {
     family:
-      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     weights: {
       light: 300,
       normal: 400,
-      bold: 600
+      bold: 600,
+      black: 700
     },
     sizes: {
       extraSmall: '0.8rem',
@@ -30,7 +35,7 @@ export default {
   colors: {
     black: '#000000',
     white: '#FFFFFF',
-    cyan: '#00E7F9',
+    pictonBlue: '#33A1F2',
     supernova: '#FFCB00'
   },
   spacings: {

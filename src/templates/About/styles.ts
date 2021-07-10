@@ -6,28 +6,80 @@ export const Wrapper = styled.div`
 
 export const Content = styled.section`
   ${() => css`
-    text-align: center;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
+    height: 100%;
+  `}
+`;
+
+export const HeaderWrapper = styled.header`
+  ${({ theme }) => css`
+    display: flex;
     align-items: center;
+    height: 6rem;
     justify-content: center;
-    height: 100vh;
+    border-bottom: 0.4rem solid ${theme.colors.pictonBlue};
+
+    margin-bottom: ${theme.spacings.medium};
   `}
 `;
 
-export const HeadingWrapper = styled.h1`
+export const HeaderLogoWrapper = styled.div`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.display};
-    border: 1px solid red;
-    margin-bottom: ${theme.spacings.extraLarge};
+    position: absolute;
+    left: ${theme.spacings.medium};
   `}
 `;
 
-export const BodyWrapper = styled.section`
+export const HeaderText = styled.h1`
   ${({ theme }) => css`
-    p {
-      font-size: ${theme.font.sizes.medium};
+    text-transform: lowercase;
+    font-size: ${theme.font.sizes.extraLarge};
+    font-weight: ${theme.font.weights.normal};
+  `}
+`;
+
+export const BodyWrapper = styled.section``;
+
+export const ProfileCardWrapper = styled.div`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.pictonBlue};
+    border-radius: ${theme.border.radius.large};
+    padding: ${theme.spacings.medium};
+    position: relative;
+
+    margin-top: ${theme.spacings.large};
+
+    & + div {
+      margin-top: ${theme.spacings.extraLarge};
     }
+  `}
+`;
+
+export const PictureWrapper = styled.img`
+  ${({ theme }) => css`
+    width: 6.8rem;
+    height: 6.8rem;
+    border-radius: ${theme.border.radius.rounded};
+    position: absolute;
+    border: 0.4rem solid ${theme.colors.black};
+    background-color: ${theme.colors.pictonBlue};
+    top: -3.4rem;
+  `}
+`;
+
+export const ProfileName = styled.strong`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.large};
+    display: block;
+    font-size: ${theme.font.sizes.extraLarge};
+  `}
+`;
+
+export const ProfileDescription = styled.p`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.small};
+    font-size: ${theme.font.sizes.medium};
+    color: black;
   `}
 `;
