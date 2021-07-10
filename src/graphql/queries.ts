@@ -4,12 +4,8 @@ export const GET_CREATORS = gql`
   query getCreators {
     creators {
       id
-      slug
-      heading
-      companyName
-      companyDescription
-      developerName
-      developerDescription
+      name
+      description
     }
   }
 `;

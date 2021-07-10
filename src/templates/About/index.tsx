@@ -9,23 +9,12 @@ import * as s from './styles';
 
 export type CreatorProps = {
   name: string;
-  avatar: string;
+  avatar?: string;
   description: string;
 };
 
 export type AboutTemplateProps = {
-  creators: [
-    {
-      heading: string;
-      slug: string;
-      companyAvatar?: string;
-      companyName: string;
-      companyDescription: string;
-      developerAvatar?: string;
-      developerName: string;
-      developerDescription: string;
-    }
-  ];
+  creators: CreatorProps[];
 };
 
 const AboutTemplate = ({ creators }: AboutTemplateProps) => {
@@ -38,25 +27,21 @@ const AboutTemplate = ({ creators }: AboutTemplateProps) => {
         <s.HeaderLogoWrapper>
           <WorkoutLogoText />
         </s.HeaderLogoWrapper>
-        <s.HeaderText>{creators[0].heading}</s.HeaderText>
+        <s.HeaderText>about</s.HeaderText>
       </s.HeaderWrapper>
       <Container>
         <s.Content>
           <s.BodyWrapper>
-            <s.ProfileCardWrapper>
-              <s.PictureWrapper src="https://avatars.githubusercontent.com/u/38539443?v=4" />
-              <s.ProfileName>{creators[0].companyName}</s.ProfileName>
-              <s.ProfileDescription>
-                {creators[0].companyDescription}
-              </s.ProfileDescription>
-            </s.ProfileCardWrapper>
-            <s.ProfileCardWrapper>
-              <s.PictureWrapper src="https://avatars.githubusercontent.com/u/38539443?v=4" />
-              <s.ProfileName>{creators[0].developerName}</s.ProfileName>
-              <s.ProfileDescription>
-                {creators[0].developerDescription}
-              </s.ProfileDescription>
-            </s.ProfileCardWrapper>
+            {creators.length > 0 &&
+              creators.map(creator => (
+                <s.ProfileCardWrapper key={creator.name}>
+                  <s.PictureWrapper src="https://avatars.githubusercontent.com/u/38539443?v=4" />
+                  <s.ProfileName>{creator.name}</s.ProfileName>
+                  <s.ProfileDescription>
+                    {creator.description}
+                  </s.ProfileDescription>
+                </s.ProfileCardWrapper>
+              ))}
           </s.BodyWrapper>
         </s.Content>
       </Container>
