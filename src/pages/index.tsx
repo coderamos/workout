@@ -30,7 +30,7 @@ const Home = () => {
   ];
   return (
     <BaseTemplate>
-      <LinkWrapper href="/about">
+      <LinkWrapper href="/about" isFloat>
         <InfoIcon size={32} aria-label="about" />
       </LinkWrapper>
       <Map places={places} />

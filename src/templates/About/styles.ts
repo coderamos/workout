@@ -17,18 +17,14 @@ export const HeaderWrapper = styled.header`
     display: flex;
     align-items: center;
     height: 6rem;
-    justify-content: center;
+    justify-content: space-between;
     border-bottom: 0.4rem solid ${theme.colors.pictonBlue};
-
     margin-bottom: ${theme.spacings.medium};
   `}
 `;
 
 export const HeaderLogoWrapper = styled.div`
-  ${({ theme }) => css`
-    position: absolute;
-    left: ${theme.spacings.medium};
-  `}
+  ${() => css``}
 `;
 
 export const HeaderText = styled.h1`

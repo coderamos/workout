@@ -6,31 +6,58 @@ export const GET_CREATORS = gql`
       id
       name
       description
-    }
-  }
-`;
-
-export const GET_PAGES = gql`
-  query getPages($first: Int) {
-    pages(first: $first) {
-      id
-      slug
-      heading
-      body {
-        html
+      avatar {
+        width
+        height
+        url
       }
     }
   }
 `;
 
-export const GET_PAGE_BY_SLUG = gql`
-  query getPageBySlug($slug: String!) {
-    page(where: { slug: $slug }) {
+export const GET_PLACES = gql`
+  query getPlaces {
+    places {
       id
       slug
-      heading
-      body {
-        html
+      name
+      date
+      description
+      population
+      averageSalary
+      gallery {
+        url
+        width
+        height
+      }
+      stacks {
+        name
+        openPositions
+        annualAverageSalary
+      }
+    }
+  }
+`;
+
+export const GET_PLACE_BY_SLUG = gql`
+  query getPlaceBySlug($slug: String) {
+    place(where: { slug: $slug }) {
+      id
+      slug
+      name
+      date
+      description
+      population
+      averageSalary
+      gallery {
+        url
+        width
+        height
+      }
+      stacks {
+        name
+        openPositions
+        annualAverageSalary
       }
     }
   }

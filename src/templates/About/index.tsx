@@ -7,9 +7,15 @@ import WorkoutLogoText from 'assets/icons/WorkoutLogoText';
 
 import * as s from './styles';
 
+export type ImageProps = {
+  url: string;
+  width: number;
+  height: number;
+};
+
 export type CreatorProps = {
   name: string;
-  avatar?: string;
+  avatar: ImageProps;
   description: string;
 };
 
@@ -20,22 +26,26 @@ export type AboutTemplateProps = {
 const AboutTemplate = ({ creators }: AboutTemplateProps) => {
   return (
     <s.Wrapper>
-      <LinkWrapper href="/">
-        <MapIcon size={32} aria-label="about" />
-      </LinkWrapper>
-      <s.HeaderWrapper>
-        <s.HeaderLogoWrapper>
-          <WorkoutLogoText />
-        </s.HeaderLogoWrapper>
-        <s.HeaderText>about</s.HeaderText>
-      </s.HeaderWrapper>
+      <Container>
+        <s.HeaderWrapper>
+          <s.HeaderLogoWrapper>
+            <WorkoutLogoText />
+          </s.HeaderLogoWrapper>
+          <s.HeaderText>about</s.HeaderText>
+          <LinkWrapper href="/">
+            <MapIcon size={32} aria-label="about" />
+          </LinkWrapper>
+        </s.HeaderWrapper>
+      </Container>
       <Container>
         <s.Content>
           <s.BodyWrapper>
             {creators.length > 0 &&
               creators.map(creator => (
                 <s.ProfileCardWrapper key={creator.name}>
-                  <s.PictureWrapper src="https://avatars.githubusercontent.com/u/38539443?v=4" />
+                  {creator.avatar && (
+                    <s.PictureWrapper src={creator.avatar.url} />
+                  )}
                   <s.ProfileName>{creator.name}</s.ProfileName>
                   <s.ProfileDescription>
                     {creator.description}

@@ -39,16 +39,7 @@ const GlobalStyles: GlobalStyleComponent<
       font-size: ${theme.font.sizes.medium};
 
       ::-webkit-scrollbar {
-        background-color: ${theme.colors.black};
-        width: 0.8rem;
-      }
-      ::-webkit-scrollbar-track {
-        background-color: ${theme.colors.black};
-        border-radius: ${theme.border.radius.medium};
-      }
-      ::-webkit-scrollbar-thumb {
-        background-color: ${theme.colors.pictonBlue};
-        border-radius: ${theme.border.radius.medium};
+        display: none;
       }
 
       ${!removeBackgroundColor &&

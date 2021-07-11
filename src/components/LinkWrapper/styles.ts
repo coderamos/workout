@@ -1,11 +1,20 @@
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
 
-export const Wrapper = styled.div`
-  ${({ theme }) => css`
+import { LinkWrapperProps } from '.';
+
+type WrapperProps = Pick<LinkWrapperProps, 'isFloat'>;
+
+const wrapperModifiers = {
+  fixed: (theme: DefaultTheme) => css`
     position: fixed;
     z-index: 1100; // bigger than leaflet
     top: ${theme.spacings.medium};
     right: ${theme.spacings.medium};
+  `
+};
+
+export const Wrapper = styled.div<WrapperProps>`
+  ${({ theme, isFloat }) => css`
     color: ${theme.colors.white};
     cursor: pointer;
 
@@ -16,5 +25,7 @@ export const Wrapper = styled.div`
         color: ${theme.colors.pictonBlue};
       }
     }
+
+    ${!!isFloat && wrapperModifiers.fixed(theme)}
   `}
 `;
