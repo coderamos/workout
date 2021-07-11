@@ -5,6 +5,8 @@ import { Container } from 'components/Container';
 
 import WorkoutLogoText from 'assets/icons/WorkoutLogoText';
 
+import { formatDate } from 'utils/date';
+
 import * as s from './styles';
 
 export type StackProps = {
@@ -39,6 +41,8 @@ const PlaceTemplate = ({
   stacks,
   gallery
 }: PlaceTemplateProps) => {
+  const formattedDate = formatDate(date, 'pt-BR');
+
   return (
     <s.Wrapper>
       <Container>
@@ -56,27 +60,27 @@ const PlaceTemplate = ({
       <s.Content>
         <s.BodyWrapper>
           <Container>
-            <s.Date>{date}</s.Date>
+            <s.Date>{formattedDate}</s.Date>
             <s.PlaceName>{name}</s.PlaceName>
             <s.PlaceDescription>{description}</s.PlaceDescription>
-            <s.SectionTitle>Population</s.SectionTitle>
+            <s.SectionTitle>População</s.SectionTitle>
             <s.SectionContent>{population}</s.SectionContent>
-            <s.SectionTitle>AVERAGE SALARY</s.SectionTitle>
+            <s.SectionTitle>MÉDIA SALARIAL</s.SectionTitle>
             <s.SectionContent>{averageSalary}</s.SectionContent>
-            <s.SectionTitle>STACKS</s.SectionTitle>
+            <s.SectionTitle>OPORTUNIDADES</s.SectionTitle>
             {stacks.length > 0 &&
               stacks.map(stack => (
                 <s.StackCardWrapper key={stack.name}>
                   <s.StackName>{stack.name}</s.StackName>
                   <s.OpenPositionsWrapper>
-                    <s.OpenPositionsText>OPEN POSITIONS</s.OpenPositionsText>
+                    <s.OpenPositionsText>VAGAS ABERTAS</s.OpenPositionsText>
                     <s.OpenPositionsValue>
                       {stack.openPositions}
                     </s.OpenPositionsValue>
                   </s.OpenPositionsWrapper>
                   <s.AnnualAverageSallaryWrapper>
                     <s.AnnualAverageSallaryText>
-                      ANNUAL AVERAGE SALARY
+                      SALÁRIO MÉDIO ANUAL
                     </s.AnnualAverageSallaryText>
                     <s.AnnualAverageSallaryValue>
                       {stack.annualAverageSalary}
@@ -84,7 +88,7 @@ const PlaceTemplate = ({
                   </s.AnnualAverageSallaryWrapper>
                 </s.StackCardWrapper>
               ))}
-            <s.SectionTitle>GALLERY</s.SectionTitle>
+            <s.SectionTitle>GALERIA</s.SectionTitle>
             <s.GalleryWrapper>
               {gallery.length > 0 &&
                 gallery.map(image => (
