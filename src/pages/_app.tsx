@@ -4,6 +4,9 @@ import Head from 'next/head';
 import NextNprogress from 'nextjs-progressbar';
 import { ThemeProvider } from 'styled-components';
 
+import { DefaultSeo } from 'next-seo';
+import SEO from '../../next-seo.config';
+
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 
@@ -11,7 +14,6 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Workout</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
@@ -21,11 +23,8 @@ function App({ Component, pageProps }: AppProps) {
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossOrigin=""
         />
-        <meta
-          name="description"
-          content="The best places to work with technology"
-        />
       </Head>
+      <DefaultSeo {...SEO} />
       <GlobalStyles />
       <NextNprogress
         color={theme.colors.cyan}
