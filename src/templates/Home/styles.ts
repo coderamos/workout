@@ -18,7 +18,7 @@ export const HeaderWrapper = styled.header`
     align-items: center;
     height: 6rem;
     justify-content: space-between;
-    border-bottom: 0.4rem solid ${theme.colors.pictonBlue};
+    border-bottom: 0.4rem solid ${theme.colors.cyan};
     margin-bottom: ${theme.spacings.medium};
   `}
 `;
@@ -39,7 +39,7 @@ export const BodyWrapper = styled.section``;
 
 export const ProfileCardWrapper = styled.div`
   ${({ theme }) => css`
-    background-color: ${theme.colors.pictonBlue};
+    background-color: ${theme.colors.cyan};
     border-radius: ${theme.border.radius.large};
     padding: ${theme.spacings.medium};
     position: relative;
@@ -59,7 +59,7 @@ export const PictureWrapper = styled.img`
     border-radius: ${theme.border.radius.rounded};
     position: absolute;
     border: 0.4rem solid ${theme.colors.black};
-    background-color: ${theme.colors.pictonBlue};
+    background-color: ${theme.colors.cyan};
     top: -3.4rem;
   `}
 `;

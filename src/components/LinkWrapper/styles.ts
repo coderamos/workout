@@ -22,7 +22,7 @@ export const Wrapper = styled.div<WrapperProps>`
       transition: color ${theme.transition.default};
 
       &:hover {
-        color: ${theme.colors.pictonBlue};
+        color: ${theme.colors.cyan};
       }
     }
 

@@ -16,15 +16,15 @@ export type MapProps = {
   places?: PlaceProps[];
 };
 
-const MAPBOX_API_KEY = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
-const MAPBOX_USERID = process.env.NEXT_PUBLIC_MAPBOX_USERID;
-const MAPBOX_STYLEID = process.env.NEXT_PUBLIC_MAPBOX_STYLEID;
+const MAPBOX_ACCESS_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
+const MAPBOX_USER_ID = process.env.NEXT_PUBLIC_MAPBOX_USER_ID;
+const MAPBOX_STYLE_URL = process.env.NEXT_PUBLIC_MAPBOX_STYLE_URL;
 
 const CustomTileLayer = () => {
-  return MAPBOX_API_KEY ? (
+  return MAPBOX_ACCESS_TOKEN ? (
     <TileLayer
       attribution='© <a href="https://apps.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      url={`https://api.mapbox.com/styles/v1/${MAPBOX_USERID}/${MAPBOX_STYLEID}/tiles/256/{z}/{x}/{y}@2x?access_token=${MAPBOX_API_KEY}`}
+      url={`https://api.mapbox.com/styles/v1/${MAPBOX_USER_ID}/${MAPBOX_STYLE_URL}/tiles/256/{z}/{x}/{y}@2x?access_token=${MAPBOX_ACCESS_TOKEN}`}
     />
   ) : (
     <TileLayer
