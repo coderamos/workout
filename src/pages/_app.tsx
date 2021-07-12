@@ -14,6 +14,10 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
+        <meta
+          name="google-site-verification"
+          content="Yb0LVTLs6O85oSx_3G8h2c8T9n9n-mQ0C-yA1MZOv0Y"
+        />
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
