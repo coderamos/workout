@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import { useRouter } from 'next/dist/client/router';
+
 import { Map as MapIcon } from '@styled-icons/feather';
 
 import LinkWrapper from 'components/LinkWrapper';
@@ -42,6 +45,9 @@ const PlaceTemplate = ({
   gallery
 }: PlaceTemplateProps) => {
   const formattedDate = formatDate(date, 'pt-BR');
+
+  const router = useRouter();
+  if (router.isFallback) return null;
 
   return (
     <s.Wrapper>
@@ -93,7 +99,13 @@ const PlaceTemplate = ({
               {gallery.length > 0 &&
                 gallery.map(image => (
                   <s.ImageWrapper key={image.url}>
-                    <s.Image src={image.url} alt={image.imageDescription} />
+                    <Image
+                      src={image.url}
+                      alt={image.imageDescription}
+                      width={1000}
+                      height={600}
+                      quality={75}
+                    />
                     <s.ImageDescriptionWrapper>
                       <s.ImageDescription>
                         {image.imageDescription}

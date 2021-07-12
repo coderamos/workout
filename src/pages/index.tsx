@@ -1,41 +1,21 @@
-import dynamic from 'next/dynamic';
+import { GetStaticProps } from 'next';
 
-import { Info as InfoIcon } from '@styled-icons/feather';
+import client from 'graphql/client';
+import { GET_PLACES } from 'graphql/queries';
+import { GetPlacesQuery } from 'graphql/generated/graphql';
 
-import BaseTemplate from 'templates/Base';
-import LinkWrapper from 'components/LinkWrapper';
+import HomeTemplate, { HomeTemplateProps } from 'templates/Home';
 
-const Map = dynamic(() => import('components/Map'), { ssr: false });
+export default function Home({ places }: HomeTemplateProps) {
+  return <HomeTemplate places={places} />;
+}
 
-const Home = () => {
-  const places = [
-    {
-      id: '1',
-      name: 'Brisbane',
-      slug: 'brisbane',
-      location: {
-        latitude: -27.470125,
-        longitude: 153.021072
-      }
-    },
-    {
-      id: '2',
-      name: 'Adelaide',
-      slug: 'adelaide',
-      location: {
-        latitude: -34.92123,
-        longitude: 138.599503
-      }
+export const getStaticProps: GetStaticProps = async () => {
+  const { places } = await client.request<GetPlacesQuery>(GET_PLACES);
+
+  return {
+    props: {
+      places
     }
-  ];
-  return (
-    <BaseTemplate>
-      <LinkWrapper href="/about" isFloat>
-        <InfoIcon size={32} aria-label="about" />
-      </LinkWrapper>
-      <Map places={places} />
-    </BaseTemplate>
-  );
+  };
 };
-
-export default Home;

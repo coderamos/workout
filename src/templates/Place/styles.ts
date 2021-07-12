@@ -142,12 +142,6 @@ export const ImageWrapper = styled.div`
   `}
 `;
 
-export const Image = styled.img`
-  ${() => css`
-    max-width: 100%;
-  `}
-`;
-
 export const ImageDescriptionWrapper = styled.div`
   ${() => css`
     display: flex;
