@@ -13,7 +13,6 @@ export type HomeTemplateProps = {
 };
 
 const Home = ({ places }: HomeTemplateProps) => {
-  console.log({ places });
   return (
     <BaseTemplate>
       <LinkWrapper href="/about" isFloat>
