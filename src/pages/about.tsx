@@ -19,6 +19,7 @@ export const getStaticProps: GetStaticProps = async () => {
   if (!creators) return { notFound: true };
 
   return {
+    revalidate: 5,
     props: {
       creators: creators
     }
