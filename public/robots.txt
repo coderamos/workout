@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://workout-tech.vercel.app/
+
+# Sitemaps
+Sitemap: https://workout-tech.vercel.app/sitemap.xml
